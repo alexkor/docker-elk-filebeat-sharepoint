@@ -1,0 +1,9 @@
+filebeat.inputs:
+- type: log
+  enabled: true
+  paths:
+    - /usr/share/filebeat/hostlogs/*.log
+output.logstash:
+  hosts: ["logstash:5044"]
+setup.kibana:
+  host: "kibana"
