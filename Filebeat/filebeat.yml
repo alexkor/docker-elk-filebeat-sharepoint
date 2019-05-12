@@ -2,6 +2,7 @@ filebeat.inputs:
 - type: log
   enabled: true
   paths:
+    #hostlogs as volumes from docker-compose
     - /usr/share/filebeat/hostlogs/*.log
 output.logstash:
   hosts: ["logstash:5044"]
